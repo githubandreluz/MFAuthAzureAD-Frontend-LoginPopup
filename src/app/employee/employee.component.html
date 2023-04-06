@@ -1,0 +1,49 @@
+<div class="card-body">
+  <div class="row">
+    <div class="col-12 text-center">
+      <h1>Pagina acessada somente via autenticação</h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <table class="table">
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Age</th>
+          <th scope="col">Designation</th>
+          <th scope="col">Name</th>
+        </tr>
+        <tr *ngFor="let employee of employeesList">
+          <td>{{ employee.employeeID }} </td>
+          <td>{{ employee.age }}</td>
+          <td>{{ employee.designation }}</td>
+          <td>{{ employee.name }}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 text-center">
+      <label>Grupos do usuário logado:</label>
+      {{ getGruposUsuarioLogado() }}
+    </div>
+  </div>
+  <div class="row">
+
+    <div class="col-12 text-center">
+      <span class="btn btn-secondary" (click)="loginPopup()">Verificar Login novamente</span>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-6">
+
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-11"></div>
+    <div class="col-1">
+      <span class="btn btn-secondary" [routerLink]="['/']" routerLinkActive="router-link-active">Voltar</span>
+    </div>
+  </div>
+</div>
